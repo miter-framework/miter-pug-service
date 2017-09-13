@@ -46,9 +46,11 @@
         "@types/node": "^8.0.28",
         "@types/pug": "^2.0.4",
         "lodash": "^4.17.4",
-        "miter": "^0.4.0",
         "path": "^0.12.7",
         "pug": "^2.0.0-rc.4",
         "typescript": "2.3.4"
+    },
+    "peerDependencies": {
+        "miter": "^0.4.0"
     }
 }

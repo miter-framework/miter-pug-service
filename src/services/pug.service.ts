@@ -1,4 +1,4 @@
-import { Service, Logger, Name, TemplateService, Miter } from 'miter';
+import { Service, Logger, Name, TemplateService } from 'miter';
 import { PugTemplate } from '../util/pug';
 import * as pugRaw from 'pug';
 import path = require('path');
