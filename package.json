@@ -3,6 +3,7 @@
     "version": "0.5.0",
     "description": "The Pug templating engine exposed as a Miter service.",
     "main": "dist/index.js",
+    "typings": "./dist/index",
     "scripts": {
         "test": "bash ./scripts/test.sh",
         "test-once": "bash ./scripts/test.sh once",
