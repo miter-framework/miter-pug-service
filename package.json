@@ -1,0 +1,54 @@
+{
+    "name": "miter-pug-service",
+    "version": "0.5.0",
+    "description": "The Pug templating engine exposed as a Miter service.",
+    "main": "dist/index.js",
+    "scripts": {
+        "test": "bash ./scripts/test.sh",
+        "test-once": "bash ./scripts/test.sh once",
+        "test-watch": "bash ./scripts/test.sh watch",
+        "travis": "bash ./scripts/travis.sh",
+        "build": "tsc",
+        "build-production": "tsc --project tsconfig-production.json",
+        "watch": "tsc -w",
+        "lint": "./node_modules/.bin/tslint tslint -c \"config/tslint.json\" --project \"tsconfig.json\" -e \"**/*.spec.ts\" -t stylish"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/miter-framework/miter-pug-service.git"
+    },
+    "keywords": [
+        "miter",
+        "pug",
+        "miter-framework"
+    ],
+    "author": "Brandon Slade <brandonyoyoslade@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/miter-framework/miter-pug-service/issues"
+    },
+    "homepage": "https://github.com/miter-framework/miter-pug-service#readme",
+    "devDependencies": {
+        "@types/chai": "^3.5.2",
+        "@types/mocha": "^2.2.41",
+        "@types/sinon": "^2.2.1",
+        "@types/sinon-chai": "^2.7.27",
+        "chai": "^3.5.0",
+        "mocha": "^3.3.0",
+        "mocha-typescript": "^1.1.2",
+        "sinon": "^2.2.0",
+        "sinon-chai": "^2.10.0",
+        "ts-node": "^3.0.4",
+        "tslint": "^5.2.0"
+    },
+    "dependencies": {
+        "@types/lodash": "^4.14.74",
+        "@types/node": "^8.0.28",
+        "@types/pug": "^2.0.4",
+        "lodash": "^4.17.4",
+        "miter": "^0.4.0",
+        "path": "^0.12.7",
+        "pug": "^2.0.0-rc.4",
+        "typescript": "2.3.4"
+    }
+}
