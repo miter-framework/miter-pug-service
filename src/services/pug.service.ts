@@ -1,4 +1,4 @@
-import { Service, Logger, Name, TemplateService } from 'miter';
+import { Service, Name, Server, Logger, TemplateService } from 'miter';
 import { PugTemplate } from '../util/pug';
 import * as pugRaw from 'pug';
 import path = require('path');
@@ -8,6 +8,7 @@ let pathJoin = path.join.bind(path);
 @Name('pug')
 export class PugService extends TemplateService {
     constructor(
+        private server: Server,
         private logger: Logger
     ) {
         super();
@@ -16,7 +17,9 @@ export class PugService extends TemplateService {
     async start() {
         //TODO: provide a way to change these values
         this._defaultPugOptions = {};
-        this._defaultPugLocals = {};
+        this._defaultPugLocals = {
+            server: this.server
+        };
         this._baseDir = '';
     }
     

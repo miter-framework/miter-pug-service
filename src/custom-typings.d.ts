@@ -3,6 +3,14 @@
 declare module 'miter' {
     declare function Service(): (service: any) => void;
     
+    declare function Name(name: string): (injectable: any) => void;
+    
+    declare class Server {
+        constructor(meta: any);
+        
+        //...
+    };
+    
     declare class Logger {
         constructor(core: any, subsystem: string);
         
@@ -16,8 +24,6 @@ declare module 'miter' {
         warn(message?: any, ...optionalParams: any[]): void;
         verbose(message?: any, ...optionalParams: any[]): void;
     }
-    
-    declare function Name(name: string): (injectable: any) => void;
     
     declare class TemplateService {
         constructor();
